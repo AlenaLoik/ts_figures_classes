@@ -16,7 +16,7 @@ export class Triangle implements Figure {
     public b: number,
     public c: number,
   ) {
-    if (a < 0 || b < 0 || c < 0 || a + b <= c || a + c <= b || b + c <= a) {
+    if (a <= 0 || b <= 0 || c <= 0 || a + b <= c || a + c <= b || b + c <= a) {
       throw new Error('Invalid triangle sides');
     }
   }
@@ -36,7 +36,7 @@ export class Circle implements Figure {
     public color: Color,
     public radius: number,
   ) {
-    if (radius < 0) {
+    if (radius <= 0) {
       throw new Error('Invalid radius');
     }
   }
@@ -56,7 +56,7 @@ export class Rectangle implements Figure {
     public width: number,
     public height: number,
   ) {
-    if (width < 0 || height < 0) {
+    if (width <= 0 || height <= 0) {
       throw new Error('Invalid side');
     }
   }
